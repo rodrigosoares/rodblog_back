@@ -5,11 +5,9 @@ Rails.application.routes.draw do
     root to: "posts#index"
   end
 
-  # root controller: :posts, action: :index
-
   # Start Bootstrap pages.
-  root 'clean_blogs#index'
-  get  'about',   controller: :clean_blogs, action: :about
-  get  'post',    controller: :clean_blogs, action: :post
-  get  'contact', controller: :clean_blogs, action: :contact
+  root controller: :pages, action: :index
+  get  'about',   controller: :pages, action: :about
+  get  'post',    controller: :pages, action: :post
+  get  'contact', controller: :pages, action: :contact
 end
