@@ -22,6 +22,9 @@ gem 'foreman'
 # Creates slugs for more human IDs.
 gem 'friendly_id', '~> 5.1.0'
 
+# Imports Start Bootstrap themes.
+gem 'frontend-generators'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
