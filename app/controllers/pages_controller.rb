@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-	def index
-    @post = Post.last
+	def home
+    @post = Post.published.last
 	end
 
 	def about
