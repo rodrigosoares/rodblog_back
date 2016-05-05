@@ -11,8 +11,10 @@ class PostDashboard < Administrate::BaseDashboard
     id: Field::Number,
     slug: Field::String,
     title: Field::String,
-    content: Field::String,
+    abstract: Field::String,
+    content: Field::Text,
     published: Field::Boolean,
+    created_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,7 +25,7 @@ class PostDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
-    :content,
+    :abstract,
     :published,
   ].freeze
 
@@ -33,8 +35,10 @@ class PostDashboard < Administrate::BaseDashboard
     :id,
     :slug,
     :title,
+    :abstract,
     :content,
     :published,
+    :created_at,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -42,6 +46,7 @@ class PostDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :title,
+    :abstract,
     :content,
     :published,
   ].freeze
