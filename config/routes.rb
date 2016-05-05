@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root controller: :pages, action: :home
 
   get  'about',   controller: :pages, action: :about
-  get  'post',    controller: :pages, action: :post
   get  'contact', controller: :pages, action: :contact
+
+  resources :posts, only: [:index, :show]
 end
