@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get  'about',   controller: :pages, action: :about
   get  'contact', controller: :pages, action: :contact
 
-  resources :posts, only: [:index, :show]
+  resources :posts,    only: [:index, :show]
+  resources :projects, only: [:index, :show]
 end
