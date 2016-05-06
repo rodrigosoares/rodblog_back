@@ -9,11 +9,19 @@
     <div class="container spacer">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div>
                 <h1 class="section-heading"><%= @post.title %></h1>
                 <h2 class="post-subtitle text-muted"><%= @post.abstract %></h2>
                 <p>
                   <%= simple_format @post.content %>
                 </p>
+              </div>
+              <hr>
+              <ul class="pager">
+                  <li class="previous">
+                      <a href="<%= posts_path %>">&larr; Voltar</a>
+                  </li>
+              </ul>
             </div>
         </div>
     </div>

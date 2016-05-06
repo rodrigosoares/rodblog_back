@@ -17,7 +17,7 @@
                         <%= @post.abstract %>
                     </h3>
                     <p>
-                      <%= @post.content %>
+                      <%= simple_format @post.content %>
                     </p>
                 <% end %>
                 <p class="post-meta">Publicado em <%= @post.created_at.strftime '%d/%m/%Y' %></p>
