@@ -1,0 +1,30 @@
+<% provide :title, 'Posts' %>
+
+<%= render 'pages/shim' %>
+<%= render 'pages/navigation' %>
+<%= render 'pages/header' %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <% @projects.each do |project| %>
+            <div class="post-preview">
+                <%= link_to project_path(project.slug) do %>
+                    <h2 class="post-title">
+                        <%= project.title %>
+                    </h2>
+                    <h3 class="post-subtitle">
+                        <%= project.institution %>
+                    </h3>
+                <% end %>
+                <p class="post-meta"><%= link_to project.url %></p>
+            </div>
+            <hr>
+          <% end %>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<%= render 'pages/footer' %>
