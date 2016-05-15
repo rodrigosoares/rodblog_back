@@ -1,0 +1,32 @@
+<% provide :title, @project.title %>
+
+<%= render 'pages/shim' %>
+<%= render 'pages/navigation' %>
+<%#= render 'pages/header' %>
+
+<article>
+    <div class="container spacer">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div>
+                <h1 class="section-heading"><%= @project.title %></h1>
+                <h2 class="post-subtitle text-muted"><%= @project.institution %></h2>
+                <h3 class="text-muted"><%= link_to @project.url, @project.url %></h3>
+                <p>
+                  <%= simple_format @project.description %>
+                </p>
+              </div>
+              <hr>
+              <ul class="pager">
+                  <li class="previous">
+                      <a href="<%= projects_path %>">&larr; Voltar</a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+<br>
+
+<%= render 'pages/footer' %>

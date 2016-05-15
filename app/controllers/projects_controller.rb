@@ -4,6 +4,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    #code
+    @project = Project.friendly.find params[:id]
   end
 end
