@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { sessions: 'admin/sessions' }
+
   namespace :admin do
     resources :posts
     resources :projects
 
-    root to: "posts#index"
+    root to: 'posts#index'
   end
 
   root controller: :pages, action: :home
