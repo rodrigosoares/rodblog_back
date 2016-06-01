@@ -12,10 +12,5 @@
  *
  *= require_tree .
  *= require_self
- *= require bootstrap
  *= require font_awesome
  */
-
- .spacer {
-   margin-top: 100px;
- }

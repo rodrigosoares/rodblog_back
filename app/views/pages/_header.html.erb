@@ -1,14 +1,7 @@
-<header class="intro-header" style="background-image:
-url('<%= header_info[:image_url] %>')">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="site-heading">
-                <h1><%= header_info[:title] %></h1>
-                <hr class="small">
-                <span class="subheading"><%= header_info[:subheading] %></span>
-            </div>
-        </div>
-    </div>
+<div class="jumbotron">
+  <div class="container">
+    <h1><%= header_info[:title] %></h1>
+    <p><%= header_info[:subheading] %></p>
+    <p><a class="btn btn-primary btn-lg" href="<%= about_path %>" role="button">Saiba mais sobre mim &rarr;</a></p>
+  </div>
 </div>
-</header>

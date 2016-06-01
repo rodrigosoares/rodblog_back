@@ -5,12 +5,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
+# Uses LESS for stylesheets.
+gem 'less-rails', '~> 2.7.0'
 
 # Generates an administration area.
 gem 'administrate', github: 'thoughtbot/administrate'#, '~> 0.1.5'
@@ -22,8 +22,8 @@ gem 'foreman'
 # Creates slugs for more human IDs.
 gem 'friendly_id', '~> 5.1.0'
 
-# Imports Start Bootstrap themes.
-gem 'frontend-generators'
+# Imports Twitter Bootstrap files.
+gem 'twitter-bootstrap-rails'
 
 # Uses Devise for user authentication.
 gem 'devise', '~> 4.1.1'

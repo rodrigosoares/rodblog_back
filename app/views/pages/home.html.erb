@@ -4,35 +4,20 @@
 <%= render 'navigation' %>
 <%= render 'header' %>
 
-<!-- Main Content -->
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-preview">
-                <%= link_to post_path(@post.slug) do %>
-                    <h2 class="post-title">
-                        <%= @post.title %>
-                    </h2>
-                    <h3 class="post-subtitle">
-                        <%= @post.abstract %>
-                    </h3>
-                    <p>
-                      <%= simple_format @post.content %>
-                    </p>
-                <% end %>
-                <p class="post-meta">Publicado em <%= @post.created_at.strftime '%d/%m/%Y' %></p>
-            </div>
-            <hr>
-            <!-- Pager -->
-            <ul class="pager">
-                <li class="next">
-                    <a href="<%= posts_path %>">Mais Posts &rarr;</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2><%= @post.title %></h2>
+      <p class="lead"><%= @post.abstract %></p>
+      <small>Publicado em <%= @post.created_at.strftime '%d/%m/%Y' %></small>
+      <p><%= simple_format @post.content %></p>
+      <hr>
 
-<br>
+      <div class="pull-right">
+        <a class="btn btn-default" href="<%= posts_path %>">Mais posts &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= render 'footer' %>
