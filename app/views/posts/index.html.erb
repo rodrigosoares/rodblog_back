@@ -4,26 +4,18 @@
 <%= render 'pages/navigation' %>
 
 <div class="container spacer">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <% @posts.each do |post| %>
-            <div class="post-preview">
-                <%= link_to post_path(post.slug) do %>
-                    <h2 class="post-title">
-                        <%= post.title %>
-                    </h2>
-                    <h3 class="post-subtitle">
-                        <%= post.abstract %>
-                    </h3>
-                <% end %>
-                <p class="post-meta">Publicado em <%= post.created_at.strftime '%d/%m/%Y' %></p>
-            </div>
-            <hr>
-          <% end %>
-        </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1>Posts</h1>
+      <% @posts.each do |post| %>
+        <%= link_to post_path(post.slug), class: 'no-decor' do %>
+          <h2><%= post.title %> <small><%= post.abstract %></small></h2>
+          <small>Publicado em <%= post.created_at.strftime '%d/%m/%Y' %></small>
+        <% end %>
+        <hr>
+      <% end %>
     </div>
+  </div>
 </div>
-
-<br>
 
 <%= render 'pages/footer' %>

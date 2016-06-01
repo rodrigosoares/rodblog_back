@@ -3,8 +3,13 @@ body {
   padding-bottom: 20px;
 }
 
+a.no-decor {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+
 .spacer {
-  margin-top: 100px;
+  margin-top: 25px;
 }
 
 .jumbotron {
